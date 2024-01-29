@@ -1,0 +1,54 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" controllerName="assignmentcurd.controller.assignmentcurd" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+
+        <content>
+            <Table  id="idEmployeeTabel" items="{LocalModel>/EmployeeList}" noDataText="Drop column list items here and columns in the area above">
+                <headerToolbar>
+                    <OverflowToolbar >
+                        <Title text = "{i18n>EmployeeId}"/>
+                        <ToolbarSpacer />
+                        <Button text = "Load" press= "onPressLoad" />
+                        <Button text = "Create" press= "onPressCreate" />
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column>
+                        <Label text="{i18n>EmployeeId}" />
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Salutation}" />
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Name}" />
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Address}" />
+                    </Column>
+                    <Column >
+                        <Label text="{i18n>ContactNo}" />
+                    </Column>
+                    <Column>
+                        <Label text="{i18n>Position}" />
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem >
+                        <cells>
+                            <Text text="{LocalModel>EmployeeId}"/>
+                            <ObjectStatus text="{LocalModel>Salutation}" state="{= ${LocalModel>Salutation} === 'Mrs.' ? 'Error' : 'Information' }"/>
+                            <Text text="{LocalModel>First_Name} {LocalModel>Last_Name}"/>
+                            <Text text="{LocalModel>Address}"/>
+                            <Text text="{LocalModel>CountryCode} {LocalModel>ContactNo}"/>
+                            <ObjectStatus text="{LocalModel>Position}" state="{path:'LocalModel>Position', formatter:'.PositionColor'}"/>
+                            <Text text="{LocalModel>Position}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+                
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

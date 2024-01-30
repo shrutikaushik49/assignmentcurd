@@ -8,7 +8,7 @@
                     <OverflowToolbar >
                         <Title text = "{i18n>EmployeeId}"/>
                         <ToolbarSpacer />
-                        <Button text = "Load" press= "onPressLoad" />
+                        <Button text = "Load" press= "on" />
                         <Button text = "Create" press= "onPressCreate" />
                     </OverflowToolbar>
                 </headerToolbar>

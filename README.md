@@ -1,6 +1,6 @@
 ##Adding a line to check pull
 ##adding a line to check push..
-##adiing a line to check pull through commands
+##adiing a line to check pull through commands and name
 ## Application Details
 |               |
 | ------------- |
